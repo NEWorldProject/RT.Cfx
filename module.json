@@ -1,0 +1,38 @@
+{
+  "import": {
+    "NRT": "cn.newinfinideas.neworldrt"
+  },
+  "parent": "NRT",
+  "name": "cfx",
+  "language": [
+    "cpp@2017",
+    "c@2011"
+  ],
+  "depends": [
+    "NRT.crt"
+  ],
+  "compile": [
+    {
+      "interface": [
+        "%source%/Include"
+      ],
+      "include": [
+        "%interface%",
+        "%source%/Source"
+      ],
+      "source": [
+        "%source%/Source"
+      ],
+      "macro": [
+        "NRTCORE_BUILD"
+      ]
+    }
+  ],
+  "link": {
+    "type": "library",
+    "library_flags": [
+      "dynamic"
+    ],
+    "runtime": "smt@std"
+  }
+}
